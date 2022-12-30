@@ -1,14 +1,3 @@
-
-
-FROM php:7.3-fpm
-
-RUN docker-php-ext-install pdo_mysql
-
-WORKDIR /shoping
-COPY . /shoping
-
-CMD [ "php","./index.php" ]
-
-
-EXPOSE 3000
-
+FROM php:8.0-apache
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+RUN apt-get update && apt-get upgrade -y
