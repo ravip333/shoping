@@ -18,10 +18,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: shopping
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
     ports:
-      - 9905:3306
+      - 3306:3306
    
   phpmyadmin:
      container_name: phpmyadmin
@@ -30,8 +30,8 @@ services:
        - 8080:80
      restart: always
      environment:
-      PMA_HOST : db
-      MYSQL_USERNAME: root
+      PMA_HOST : database
+      MYSQL_USER: root
+      PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: root
-     depends_on:
-       - database
+       
