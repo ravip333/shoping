@@ -20,7 +20,7 @@
 <div class="logo">
 	<a href="index.php">
 		
-		<h2>Shopping Portal test</h2>
+		<h2>Shopping Portal test1</h2>
 
 	</a>
 </div>		
